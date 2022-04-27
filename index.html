@@ -4,9 +4,534 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="author" content="AsV Nguyen">
+    <title> The Box </title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/font/themify-icons/themify-icons.css">
+    <link rel="stylesheet" href="/assets/css/responsive.css">
 </head>
+
 <body>
-    hello trung, love you Thao
+    <div id="main">
+        <div id="header">
+            <!-- begin: Nav -->
+            <ul id="nav">
+                <li><a href="#">Home</a></li>
+                <li><a href="#meaning">Meaning</a></li>
+                <li><a href="#memories">Memories</a></li>
+                <li><a href="#chance">Chance</a></li>
+                <li>
+                    <a href="#">
+                        More
+                        <i class="nav-arrow-down ti-angle-down"></i>
+                    </a>
+                    <ul class="subnav">
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#">Extras</a></li>
+                        <li><a href="#">Media</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <!-- end: Nav -->
+
+            <!--  Menu-button -->
+            <div id="mobile-menu" class="mobile-menu-btn">
+                <i class="menu-icon ti-menu"></i>
+            </div>
+
+            <!-- Search-button -->
+            <div class="search-btn">
+                <i class="search-icon ti-search"></i>
+            </div>
+
+
+
+        </div>
+        <!-- Automatic Slider -->
+        <div id="slider">
+            <style>
+            /* Slideshow container */
+            .slideshow-container {
+            max-width: 100%;
+            position: relative;
+            margin: auto;
+            }
+            
+            /* Caption text */
+            .text {
+            color: #f2f2f2;
+            font-size: 15px;
+            padding: 8px 12px;
+            position: absolute;
+            bottom: 70px;
+            width: 100%;
+            text-align: center;
+            text-shadow: 0 0 10px #000;
+            }
+            
+            .text-heading {
+            padding: 45px;
+            text-transform: uppercase;
+            text-shadow: 0 0 10px #000;
+            }
+            
+            /* Number text (1/3 etc) */
+            .numbertext {
+            color: #f2f2f2;
+            font-size: 12px;
+            padding: 8px 12px;
+            position: absolute;
+            bottom: 0;
+            }
+            
+            /* The dots/bullets/indicators */
+            .dot {
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+            }
+            
+            .active {
+            background-color: #717171;
+            }
+            
+            /* Fading animation */
+            .fade {
+            animation-name: fade;
+            animation-duration: 1.5s;
+            }
+            
+            @keyframes fade {
+            from {opacity: .5}
+            to {opacity: 1}
+            }
+            
+            /* On smaller screens, decrease text size */
+            @media only screen and (max-width: 300px) {
+            .text {font-size: 11px}
+            }
+            </style>
+            </head>
+            
+            <body>
+                        
+                <div class="slideshow-container">
+            
+                    <div class="mySlides fade">
+                        <div class="numbertext">1 / 3</div>
+                        <img src="/assets/img/content-img/pexels-freestocksorg-1687049.jpg" style="width:100%">
+                        <h2 class="text text-heading"> Chiếc hộp </h2>
+                        <div class="text">Hãy tưởng tượng trái tim ta là chiếc hộp</div>
+                    </div>
+            
+                    <div class="mySlides fade">
+                        <div class="numbertext">2 / 3</div>
+                        <img src="/assets/img/content-img/box2.jpg" style="width:100%">
+                        <h2 class="text text-heading"> Và nó </h2>
+                        <div class="text">Sẽ lưu giữ những kỉ niệm nơi trái tim</div>
+                    </div>
+            
+                    <div class="mySlides fade">
+                        <div class="numbertext">3 / 3</div>
+                        <img src="/assets/img/content-img/pexels-feyza-9185563.jpg" style="width:100%">
+                        <h2 class="text text-heading"> Thì liệu </h2>
+                        <div class="text">Ta sẽ cất giữ điều gì trong chiếc hộp của mình</div>
+                    </div>
+            
+                </div>
+                <br>
+            
+                <div style="text-align:center">
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+            
+                <script>
+                    let slideIndex = 0;
+                    showSlides();
+
+                    function showSlides() {
+                        let i;
+                        let slides = document.getElementsByClassName("mySlides");
+                        let dots = document.getElementsByClassName("dot");
+                        for (i = 0; i < slides.length; i++) {
+                            slides[i].style.display = "none";
+                        }
+                        slideIndex++;
+                        if (slideIndex > slides.length) { slideIndex = 1 }
+                        for (i = 0; i < dots.length; i++) {
+                            dots[i].className = dots[i].className.replace(" active", "");
+                        }
+                        slides[slideIndex - 1].style.display = "block";
+                        dots[slideIndex - 1].className += " active";
+                        setTimeout(showSlides, 4000); // Change image every 4s seconds
+                    }
+                </script>
+            <!-- <div class="text-content">
+                <h2 class="text-heading"> CHIẾC HỘP</h2>
+                <div class="text-description">Hãy tưởng tượng rằng trái tim ta là một chiếc hộp</div>
+            </div> -->
+        </div>
+
+        <div id="content">
+            <!-- About section -->
+            <div id="meaning" class="content-section">
+                <h2 class="section-heading"> MEANING </h2>
+                <p class="section-sub-heading"> The Box?? </p>
+                <audio controls autoplay class="section-music " 
+                src="/assets/media/Bích Phương - Chiếc hộp (Official video).mp3" title="Bích Phương - Chiếc hộp">
+                </audio>
+                <p class="about-text">
+                   Chiếc hộp, là vật chứa các vật dụng cá nhân; Có khi, là một món quà bất ngờ trong ngày ý nghĩa; Đôi lúc, chiếc hộp được
+                ví như nơi cất giữ những ký ức, kỉ niệm của trái tim. Và không biết rằng, cả anh và em sẽ cất những kỉ niệm như thế nào
+                nhỉ? Còn anh thì chỉ cất những gì đẹp nhất để bất cứ khi nào mở lại thì ta sẽ luôn hồi tưởng về nhau bằng những kỉ niệm tươi
+                đẹp nhất. Hãy cùng xem chiếc hộp của anh chứa những gì em ha !
+                </p>
+                <!-- <div class="member-list">
+                    <div class="s-col-ful mt-32 col col-third text-center">
+                        <p class="member-name"> CẤP 2 </p>
+                        <img src="/assets/img/school/c2.jpg" alt="C2" class="member-avt">
+
+                    </div>
+
+                    <div class="s-col-ful mt-32 col col-third text-center">
+                        <p class="member-name"> CẤP 3 </p>
+                        <img src="/assets/img/band/member0.jfif" alt="C3" class="member-avt">
+
+                    </div>
+
+                    <div class="s-col-ful mt-32 col col-third text-center">
+                        <p class="member-name"> HIỆN TẠI </p>
+                        <img src="/assets/img/band/member0.jfif" alt="Cs" class="member-avt">
+
+                    </div>
+                    <div class="clear"></div>
+                </div> -->
+                <img class=" col-full member-avt" src="/assets/img/slider/box2phia.jpg" alt="" width="100%">
+
+            </div>
+
+            <!-- Tour section -->
+            <div id="memories" class="tour-section">
+                <div class="content-section">
+                    <h2 class="section-heading text-white"> MEMORIES </h2>
+                    <p class="section-sub-heading text-white">Thinking of those memories, I started to write about our stories on the Internet!</p>
+                    <!-- Ticket -->
+                    <!-- <ul class="tickets-list">
+                        <li>September <span class="sold-out">Sout out</span></li>
+                        <li>October <span class="sold-out">Sout out</span></li>
+                        <li>November <span class="quatity">3</span></li>
+                    </ul> -->
+
+                    <!-- Places -->
+                    <div class="row places-list">
+                        <div class="col col-third s-col-ful mt-16">
+                            <img src="/assets/img/school/c2.jpg" alt="New York" class="places-img">
+                            <div class="places-body">
+                                <h3 class="places-heading">Kỉ niệm lần gặp gỡ - ấn tượng đầu tiên.</h3>
+                                <p class="places-time">Thu 20 Aug 2015</p>
+                                <p class="places-desc">Đó là năm anh chuyển trường sau một năm học có kết quả học tập bết bác, khởi đầu lại một năm học mới, trường mới, bạn
+                                mới đối với anh mà nói khá là khoai đấy. Nhưng không biết vì lý do nào đấy khi gặp em lần đầu tiên anh lại thấy có thiện
+                                cảm và dễ bắt chuyện với em. Có lẽ là do có cùng nốt ruồi trên mặt chăng!</p>
+                                <h5 class="place-note mt-16 ">Không body shaming đâu nhá.</h5>
+                                <!-- <button class="btn s-full-width js-buy-ticket">Buy Tickets</button> -->
+                            </div>
+                        </div>
+
+                      <div class="col col-third s-col-ful mt-16">
+                            <img src="/assets/img/school/c3.jpg" alt="Paris" class="places-img" >
+                            <div class="places-body">
+                                <h3 class="places-heading">Một người bạn tâm đầu ý hợp.</h3>
+                                <p class="places-time">Tue 25 Nov 2015</p>
+                                <p class="places-desc">À nói sao nhỉ, lúc đầu anh thấy nói chuyện, nhắn tin khá hợp cạ, kiểu vừa vui tính vừa lầy lội nhưng vẫn giữ kẻ với
+                                người xa lạ. Nhưng bước ngoặc để sự chuyển giao từ một người bạn thân sang thành crush chắc là thời điểm em quyết định
+                                tẩy nốt ruồi đi ấy. Thề lúc em xinh cực,  
+                                </p>
+                                <!-- <button class="btn s-full-width js-buy-ticket">Buy Tickets</button> -->
+                            </div>
+
+                        </div>
+
+                        <div class="col col-third s-col-ful mt-16">
+                            <img src="/assets/img/school/dey.png" alt="San Francisco" class="places-img">
+                            <div class="places-body">
+                                <h3 class="places-heading">Bắt đầu để ý em nhiều hơn một người bạn.</h3>
+                                <p class="places-time">Thu 22 Dec 2015</p>
+                                <p class="places-desc">Bắt đầu liếc trộm, để ý em nhiều hơn. Kiếm chuyện chọc ghẹo em và bắt chuyện với em đủ các kiểu! Những trò con bò kiếm cớ chạm tay em! Hầu như khoảng thời gian dường như hai ta đều biết ý của đối phương hết rồi ( à với anh thì chỉ tự biết bản thân mình
+                                thích em thôi, còn em thì anh chịu !!)</p>
+                                <!-- <button class="btn s-full-width js-buy-ticket">Buy Tickets</button> -->
+                            </div>
+                        </div>
+                        
+                        <div class="col col-half s-col-ful mt-16">
+                            <img src="/assets/img/slider/m-breakup2.jpg" alt="San Francisco" class="places-img">
+                            <div class="places-body">
+                                <h3 class="places-heading">Bắt đầu một mối quan hệ mới và ...</h3>
+                                <p class="places-time">Fri 29 Apr - Mon 09 May 2016</p>
+                                <p class="places-desc-sp">QUÁ ĐỖI HẠNH PHÚC</p>
+                                <duy class="places-desc">Duy chỉ có một điều anh tiếc đó là anh chưa thể thổ lộ cảm xúc thực sự của mình với em.
+                                    Nhưng rồi chúng ta break-up chỉ sau 10 ngày ! Xin lỗi em vì những dòng tin nhắn ấy, đáng lẽ ra em xứng đáng với những điều tốt hơn,
+                                    anh đúng là một thằng không ra gì khi giày vò em bằng những lời như vậy.
+
+                                </p>
+                                <!-- <button class="btn s-full-width js-buy-ticket">Buy Tickets</button> -->
+                            </div>
+                        </div>
+
+                        <div class="col col-half s-col-ful mt-16">
+                            <img src="/assets/img/slider/pox3.jpg " alt="San Francisco" class="places-img">
+                            <div class="places-body">
+                                <h3 class="places-heading">Một số kỉ niệm khác</h3>
+                                <p class="places-time">Pieces of memory</p>
+                                <p class="places-desc">Những lần chọc em bị dí chạy khắp sân trường nhưng chưa bao giờ em bắt kịp anh !
+                                    Những vết cào cấu bong da tróc thịt. Những lần hát vu vơ trong lóp học bị em "khen hay như ca sĩ". Những lần troll nhau trong giờ ăn bán trú trong trường.
+                                Những lần em thả thính khiến anh ấp úng chẳng nói được câu nào. Ngày anh chở em về bằng đạp điện hết pin phải tự đạp chân bở cả hơi tai thế mà vẫn tiếc hùi hụi không khi được biết em nhà ở đâu ?
+                                Những lần ngồi cạnh em lóng nga lóng ngóng. Và thứ khiến anh nhớ nhất là khoảng khắc em và tụi Trúc(Panda) + L.Nhi chặn đầu xe đạp điện anh. Em lúc
+                                đó trông ngầu cực. Mạnh mẽ, đầy cá tính, nụ cười như đang tận hưởng cuộc vui của kẻ đi săn vậy -)), để lại ấn tượng hơi bị sâu sắc đấy !! 
+                                </p>
+                                <h5 class="place-note mt-8 ">
+                                    Và còn rất rất nhiều thứ khác nữa anh muốn đặt để vào chiếc hôp của mình. Những khoảng thời gian cấp 3 sau đó; Những lần gặp mặt nhưng không chào, hỏi thăm được câu gì ?
+                                    Những lần em bảo với anh rằng đừng cố gắng quay lại với em...
+
+                                </h5>
+
+                                <!-- <button class="btn s-full-width js-buy-ticket">Buy Tickets</button> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- Chance -->
+            <div id="chance" class="change-section content-section">
+                <h2 class="section-heading">CHANCE</h2>
+                <p class="section-sub-heading">Unique opportunity!</p>
+
+                <div id="chance" class="row change-content">
+                    <style>
+                    .container {
+                    position: relative;
+                    max-width: 800px;
+                    margin: 0 auto;
+                    }
+                    
+                    .container img {
+                        vertical-align: middle;
+                        max-height: 50%;
+                    }
+                    
+                    .container .content {
+                    position: absolute;
+                    bottom: 0;
+                    background: rgb(0, 0, 0); /* Fallback color */
+                    background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+                    color: #f1f1f1;
+                    width: 100%;
+                    padding: 40px;
+                    text-align: justify;
+                    }
+
+                    .p-6 {
+                        padding-bottom: 6px;
+                    }
+                    </style>
+                                
+                                                           
+                        <div class="container mt-16">
+                            <img src="/assets/img/chance/chance3.jpg" alt="Notebook" style="width:100%;">
+                            <div class="content">
+                    
+                                <p class="p-6">Sau buổi khuya hôm đó và cả một buổi chiều tối ngày 10/02 khi anh ngồi ở ngoài đường thả dòng suy nghĩ
+                                    vào bầu trời đêm hôm đấy. Anh đã thực sự muốn bỏ cuộc, thật đấy! Nhưng nếu lại như vậy, anh sợ sẽ quay lại về con người cũ của bản thân trước kia. Anh không muốn điều đó chút nào.
+                                </p>
+                                <p>Thế nên anh quyết sẽ tự tạo cho bản thân một cơ hội duy nhất, chỉ duy nhất lần này sẽ xuống hết sức lực để được gặp em,
+                                nói chuyện với em để dù có ra sao thì anh cũng không hối hận.</p>
+                            </div>
+                        </div>
+
+                        <div class="container mt-16">
+                            <img src="/assets/img/chance/chance1'.jpg" alt="Notebook" style="width:100%;">
+                            <div class="content">
+                        
+                                <p class="p-6">
+                                Và đó là lý do anh thực hiện trang web này, một chiếc hộp chứa toàn bộ những kỉ niệm về em.
+                                Để một lần và mãi mãi buông tay những điều này, kỉ niệm này, hình bóng và nụ cười này, Tất cả.
+                                Để có thể tha thứ cho những lỗi lầm trong tình cảm của bản thân, để cuối cùng tâm trí và trái tim có khoảng trống 
+                                cho những điều tốt đẹp hơn trong hiện tại và tương lai.
+
+                                </p>
+
+                            </div>
+                        </div>
+
+                        <div class="container mt-16">
+                            <img src="/assets/img/chance/chance4.jpg.crdownload" alt="Notebook" style="width:100%;">
+                            <div class="content">
+                                <p class="p-6">
+                                    Còn nếu đâu đó trong trái tim em vẫn còn chút rung động với những gì anh đã, đang và sẽ thực hiện  thì hãy cho anh duy nhất một cơ hội này.
+                                    Anh đã đặt vé cho một chuyến du lịch 4 ngày đêm ở đảo Phú Quý(sáng 30/04-tối 03/05), vé anh đã đặt sẵn rồi, yên tâm là có cả vé đi vé - về rồi, anh không có nhốt em ngoài đó đâu!! 
+                                    Anh đã đặt cược tất cả vào chuyến đi này, bởi vì anh và em xứng đáng với nó.
+
+                                </p>
+
+                                <h3 style="text-transform: uppercase;">Bây giờ mọi quyết định nằm ở em.</h3>
+                            </div>
+                        </div>
+                </div>
+            </div>
+            <!--Begin: Contact section -->
+            <div id="contact" class="content-section">
+                <h2 class="section-heading">CONTACT</h2>
+                <p class="section-sub-heading">Fan? Drop a note!</p>
+
+                <div class="row Contact-content">
+                    <div class="col col-full s-col-ful contact-info">
+                        <p><i class="ti-location-pin"></i>BUS STATION, 281 VÕ VĂN NGÂN,TP.THỦ ĐỨC</p>
+                        <p><i class="ti-mobile"></i>Phone: <a href="tell: 0788239179"> 0788239179</a></p>
+                        <p><i class="ti-email"></i>Email: <a href="mailto:thanhtrung9179@gmail.com"> thanhtrung9179@gmail.com    </a></p>
+                    </div>
+                    <!-- <div class="col col-half s-col-ful contact-form">
+                        <form action="">
+                            <div class="row">
+                                <div class="s-col-ful col col-half">
+                                    <input type="text" placeholder="Name" name="" required id="" class="form-control">
+                                </div>
+
+                                <div class="s-col-ful col col-half s-mt-8">
+                                    <input type="email" placeholder="Email" name="" required id="" class="form-control">
+                                </div>
+                            </div>
+                            <div class="row mt-8">
+                                <div class="col col-full">
+                                    <input type="text" placeholder="Message" name="" required id=""
+                                        class="form-control">
+                                </div>
+                            </div>
+                            <input class="pull-right btn mt-16 s-full-width" type="submit" value="SEND">
+                        </form>
+                    </div>
+                </div> -->
+            </div>
+            <!-- End: Contact section -->
+            <div class="map-section">
+                <img src="/assets/img/chance/map1.png" alt="Map" style="width: 100%;">
+            </div>
+        </div>
+
+        <div id="footer">
+            <div class="social-list">
+                <a href=""><i class="ti-facebook"></i></a>
+                <a href=""><i class="ti-instagram"></i></a>
+                <a href=""><i class="ti-twitter-alt"></i></a>
+                <a href=""><i class="ti-youtube"></i></a>
+                <a href=""><i class="ti-pinterest"></i></a>
+                <a href=""><i class="ti-linkedin"></i></a>
+            </div>
+            <p class="copyright">Powered by <a href="">w3.css</a></p>
+        </div>
+    </div>
+    <!-- bảng mua ticket -->
+    <div class="modal js-modal">
+        <div class="modal-container js-modal-container">
+            <div class="modal-close js-modal-close">
+                <i class="ti-close"></i>
+            </div>
+
+            <header class="modal-header">
+                <i class="mh-icon ti-bag"></i>
+                Tickets
+            </header>
+            <div class="modal-body">
+                <label for="quatity" class="modal-label">
+                    <i class="ti-shopping-cart"></i>
+                    Tickets, $15 per person
+                </label>
+                <input id="quatity" type="text" class="modal-input" placeholder="How many?">
+
+                <label for="email" class="modal-label">
+                    <i class="ti-user"></i>
+                    Send to
+                </label>
+                <input id="email" type="email" class="modal-input" placeholder="Enter email?">
+
+                <button id="buy-tickets">
+                    Pay <i class="ti-check"></i>
+                </button>
+
+            </div>
+            <footer class="modal-footer">
+                <p class="modal-help">Need <a href="">help?</a></p>
+            </footer>
+        </div>
+    </div>
+
+    <script>
+        const buyBtns = document.querySelectorAll(".js-buy-ticket")
+        const modal = document.querySelector('.js-modal')
+        const modalContainer = document.querySelector('.js-modal-container')
+        const modalClose = document.querySelector('.js-modal-close')
+
+        // Hàm hiển thị modal mua vé (thêm class open vào modal)
+        function showBuyTickets() {
+            modal.classList.add('open')
+        }
+
+        // Hàm ẩn modal mua vé (gỡ class open của modal)
+        function hidenBuyTickets() {
+            modal.classList.remove('open')
+        }
+
+        // Lặp qua từng thẻ button và nghe hành vi click
+        for (const buyBtn of buyBtns) {
+            buyBtn.addEventListener("click", showBuyTickets)
+        }
+
+        // Nghe hành vi click vào buton
+        modalClose.addEventListener('click', hidenBuyTickets)
+        modal.addEventListener('click', hidenBuyTickets)
+        modalContainer.addEventListener('click', function (event) {
+            event.stopPropagation()
+        })
+    </script>
+
+    <!-- Thao tác mở đóng menu mobile -->
+    <script>
+        var header = document.getElementById('header');
+        var mobileMenu = document.getElementById('mobile-menu');
+        var headerHeight = header.clientHeight;
+        mobileMenu.onclick = function () {
+            var isClosed = header.clientHeight === headerHeight;
+            if (isClosed) {
+                header.style.height = 'auto';
+            } else {
+                header.style.height = null;
+            }
+        }
+
+        // Tự động đóng khi chọn menu
+        var menuItems = document.querySelectorAll('#nav li a[href*="#"]');
+        for (var i = 0; i < menuItems.length; i++) {
+            var menuItem = menuItems[i];
+
+
+            menuItem.onclick = function () {
+                var isParentMenu = this.nextElementSibling && this.nextElementSibling.classList.contains('subnav');
+                if (isParentMenu) {
+                    event.preventDefault();
+                } else {
+                    header.style.height = null;
+                }
+
+            }
+        }
+    </script>
 </body>
+
+</html>
+
 </html>
