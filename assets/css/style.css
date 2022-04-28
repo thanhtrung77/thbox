@@ -25,6 +25,10 @@ img {
     color: #fff !important;
 }
 
+.text-black {
+    color: #000 !important;
+}
+
 .text-center {
     text-align: center !important;
 }
